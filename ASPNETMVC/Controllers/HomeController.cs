@@ -24,5 +24,12 @@ namespace ASPNETMVC.Controllers
             };
             return View(employee);
         }
+
+        public ActionResult Details(int id)
+        {
+            EmployeeContext context = new EmployeeContext();
+            Employee employee = context.Employees.Find(id);
+            return View(employee);
+        }
     }
 }
