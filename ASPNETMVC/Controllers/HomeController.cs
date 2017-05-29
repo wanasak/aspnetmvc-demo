@@ -12,6 +12,7 @@ namespace ASPNETMVC.Controllers
         public ActionResult Index(int id, string name)
         {
             ViewBag.Message = $"Your id is {id} and name is {Request.QueryString["name"]}";
+            ViewBag.Cars = new List<string>() { "Toyota", "Honda", "BMW" };
             return View();
         }
     }

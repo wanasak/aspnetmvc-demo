@@ -7,3 +7,9 @@
 
 <p>@ViewBag.Message</p>
 
+<ul>
+    @foreach (string car in ViewBag.Cars)
+    {
+        <li>@car</li>
+    }
+</ul>
