@@ -7,9 +7,18 @@
 
 <p>@ViewBag.Message</p>
 
+<h3>Cars</h3>
 <ul>
     @foreach (string car in ViewBag.Cars)
     {
         <li>@car</li>
+    }
+</ul>
+
+<h3>Fruits</h3>
+<ul>
+    @foreach (int number in (List<int>)ViewData["Numbers"])
+    {
+        <li>@number.ToString()</li>
     }
 </ul>

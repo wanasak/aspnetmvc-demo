@@ -13,6 +13,7 @@ namespace ASPNETMVC.Controllers
         {
             ViewBag.Message = $"Your id is {id} and name is {Request.QueryString["name"]}";
             ViewBag.Cars = new List<string>() { "Toyota", "Honda", "BMW" };
+            ViewData["Numbers"] = new List<int>() { 1, 2, 3 };
             return View();
         }
     }
