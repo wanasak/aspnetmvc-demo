@@ -1,4 +1,5 @@
-﻿
+﻿@model ASPNETMVC.Models.Employee
+
 @{
     ViewBag.Title = "Index";
 }
@@ -22,3 +23,21 @@
         <li>@number.ToString()</li>
     }
 </ul>
+
+<h2>Employee Details</h2>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>Id</td>
+            <td>@Model.EmployeeId</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>@Model.City</td>
+        </tr>
+    </tbody>
+</table>
