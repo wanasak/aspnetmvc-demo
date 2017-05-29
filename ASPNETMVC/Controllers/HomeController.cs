@@ -19,12 +19,5 @@ namespace ASPNETMVC.Controllers
             IEnumerable<Employee> employees = context.Employees.ToList();
             return View(employees);
         }
-
-        public ActionResult Details(int id)
-        {
-            EmployeeContext context = new EmployeeContext();
-            Employee employee = context.Employees.Find(id);
-            return View(employee);
-        }
     }
 }
