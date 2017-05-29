@@ -1,4 +1,4 @@
-﻿@model ASPNETMVC.Models.Employee
+﻿@model IEnumerable<ASPNETMVC.Models.Employee>
 
 @{
     ViewBag.Title = "Index";
@@ -24,20 +24,10 @@
     }
 </ul>
 
-<h2>Employee Details</h2>
-<table class="table">
-    <tbody>
-        <tr>
-            <td>Id</td>
-            <td>@Model.EmployeeId</td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td>@Model.Name</td>
-        </tr>
-        <tr>
-            <td>City</td>
-            <td>@Model.City</td>
-        </tr>
-    </tbody>
-</table>
+<h2>Employees List</h2>
+<ul>
+    @foreach (var emp in @Model)
+    {
+        <li>@emp.Name</li>
+    }
+</ul>
