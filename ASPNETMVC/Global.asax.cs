@@ -17,7 +17,7 @@ namespace ASPNETMVC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             //Database.SetInitializer<Models.EmployeeContext>(new CreateDatabaseIfNotExists<EmployeeContext>());
-            Database.SetInitializer<Models.EmployeeContext>(null);
+            Database.SetInitializer<Models.EmployeeContext>(new EmployeeDbInitializer());
         }
     }
 }
